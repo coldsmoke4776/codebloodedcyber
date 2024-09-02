@@ -1,9 +1,14 @@
 // src/components/Layout.tsx
-import Link from 'next/link'
+import Link from 'next/link';
+import Head from 'next/head';
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default function Layout({ children, title }: { children: React.ReactNode; title?: string }) {
   return (
     <div className="min-h-screen flex flex-col">
+      {/* Use the title prop to set the page title */}
+      <Head>
+        <title>{title || 'CodeBlooded Consulting'}</title>
+      </Head>
       <header className="bg-gray-800 text-white p-4">
         <nav className="container mx-auto flex justify-between items-center">
           <Link href="/" className="text-xl font-bold">CodeBlooded Consulting</Link>
@@ -25,5 +30,5 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         </div>
       </footer>
     </div>
-  )
+  );
 }
