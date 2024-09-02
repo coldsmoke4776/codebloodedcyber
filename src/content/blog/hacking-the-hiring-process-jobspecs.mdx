@@ -1,0 +1,490 @@
+---
+title: "Hacking The Hiring Process: Job Adverts, Specs & Red Flags"
+date: "2023-05-15"
+author: "Matthew Twells"
+description: "Looking through job adverts and listings has to be one of the worst parts of the job hunting process. Vague, often badly written or just plain unrealistic - lets break down what they're really mean and how to spot red flags."
+tags: ["Technical Hiring", "Job Adverts", "Job Specs", "Red Flags"]
+---
+
+import { ArticleLayout } from '@/components/ArticleLayout'
+
+export const meta = {
+  author: 'Matthew Twells',
+  date: '2023-05-15',
+  title: 'Hacking The Hiring Process: Job Adverts, Specs & Red Flags',
+  description:
+    'Looking through job adverts and listings has to be one of the worst parts of the job hunting process. Vague, often badly written or just plain unrealistic - lets break down what they really mean and how to spot red flags.',
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+Job adverts, listings, specifications - whatever you call them, they're an often exhausting and miserable experience to wade through as a jobseeker.
+
+Often vague, unrealistic or sometimes mind-boggling in content, it's difficult to filter out what is a realistic ask versus a red flag.
+
+We'll break down a bunch of job listings and hopefully clear up some confusing wording and terminology and translate what they're <em>really</em> trying to say!
+
+<strong>Hacking The Hiring Process</strong> is a series of deep dives into each stage of the technical hiring process,
+with real, actionable advice and examples you can take away and implement immediately in your next job search.
+
+<Image src="/images/blog/hacking-the-hiring-process-images/badjobspec.png" alt="10 years experience for a junior job?" />
+
+<hr></hr>
+
+## BLUF - Bottom Line Up Front
+
+If you just want a specific piece of advice in this article, the below list details the areas we'll be going through in this article:
+
+- How do companies get to the point of writing a job description/spec? 
+- Who usually writes the average technical job description/spec?
+- Examples of good and bad job descriptions/specs
+- Red flags to look out for in job descriptions
+- Breaking down a real job description
+- Bonus: What the hell does "entry-level job" mean anymore?
+
+
+<hr></hr>
+
+### How Companies End Up Writing Job Descriptions In The First Place
+
+This one isn't too hard to grasp, thankfully:
+
+<Image src="/images/blog/hacking-the-hiring-process-images/showmejobdescriptionpic.png" alt="How a job description comes to be" />
+
+A job (and thus a <em>job description</em>) will appear normally for one of three reasons:
+
+1) <strong>Initial team buildout</strong> - A greenfield opportunity where there <em>is no predecessor</em> to speak of.
+2) <strong>Company growth/expansion</strong> - An opportunity spawning from a company doing well and <em>needing more manpower</em> to tackle workload/revenue opportunities.
+3) <strong>Backfill</strong> - An opportunity arising from the previous holder of the role in question <em>leaving</em>.
+
+The first two of these are pretty easy to understand. 
+With regards to the third though, people leave technology and cybersecurity jobs for any number of reasons, and not always bad ones:
+
+- Better opportunities, conditions and pay
+- Entrepreneurship opportunities
+- Burnout and stress
+- Work becoming routine and/or dull
+- Company culture
+- Job insecurity (post-breach etc.)
+- Lack of advancement opportunity
+- Unsustainable workload(s)
+
+Some of these are just facts of life - people move on to bigger, better things when they get the opportunity to.
+And good on them for doing so!
+
+However, <em>some</em> of these factors leave clues even at this early stage and learning to spot them can save you time and energy you'll never get back!
+
+It's only this last portion that a lot of people engage with the process of filling a job at any company. 
+If the job description is bad, then it's likely out for the world to see and affecting who applies.
+
+<hr></hr>
+
+### Who Usually Writes The Average Technical Job Description?
+
+In an ideal world, a job description would come together in a process looking something like this:
+
+<Image src="/images/blog/hacking-the-hiring-process-images/showmewhowritesspecs.png" alt="The parties involved in writing the average job description" />
+
+A beautiful symphony of the right people, with the right skills, contributing the right information - <em>chef's kiss.</em>
+
+Sadly, in reality it doesn't often work out that way:
+
+- Those actively doing the job on the ground level may not know exactly what skills can and can't be trained with the organization's current budget.
+- Hiring managers might be too busy doing their own jobs to contribute much time to developing a requisition for a role (you'll hear the term 'req' a lot if you work anywhere near hiring).
+- Technical leaders may be both too busy <em>and</em> too removed from the day-to-day to contribute valuable tactical insight to the eventual job description for a role.
+
+What often happens is instead <strong>HR professionals and recruiters</strong> end up writing what you see on jobs boards, often understaffed and overworked themselves.
+
+HR professionals and recruiters have to make do with the information available to them and whatever experience and research they're able to put together in the limited time they have.
+
+More often than not, a recruiter will look at <em>other job descriptions</em> for similar roles, and model theirs off the assumptions made.
+
+Our issue here though, is what if <em>that</em> job description was written by someone in the exact same boat?
+
+As the clever people have already surmised, you end up pretty quickly in a recursive loop where the "industry standard" qualifications are more based on statistical frequency than real-world usefulness.
+
+<em>"But doesn't that mean that people who don't do the job gets to dictate what the requirements are for it?"</em>
+
+Oftentimes, that's <strong>exactly what happens</strong> when a company just has an <em>idea</em> of the person they want to bring on board but not the specifics.
+
+This has its massive drawbacks and hidden opportunities, as we'll see throughout the rest of this article!
+
+<hr></hr>
+
+### Breaking Down Job Descriptions / Red Flags / Translating The Plain English
+
+Here's the bit of the article you came for - learning how to properly read and interpret real job descriptions!
+
+We'll look at some great ones, some bad ones and then break down a real one from LinkedIn to see what we can learn:
+
+<strong> What does a GREAT job description look like? </strong>
+
+<Image src="/images/blog/hacking-the-hiring-process-images/bishopfoxjobspec1.png" alt="Sure, its a bit of hometown pride, but indulge me." />
+
+You'll have to forgive me for claiming hometown advantage here, but I truly believe that Bishop Fox does job descriptions right.
+
+It was one of the primary reasons that I applied to my current role - it was one of the few job adverts I saw that seemed...genuinely realistic?
+
+This one here (for a Customer Success Manager position) is no different in this regard.
+
+The <strong>introductory section</strong> here is pretty industry-standard: it's much the same as the "elevator pitch" sections of your [LinkedIn profile](https://www.codebloodedcyber.com/articles/hacking-the-hiring-process-recruiters) and [resume](https://www.codebloodedcyber.com/articles/hacking-the-hiring-process-resumes).
+
+If you didn't know who Bishop Fox were before, now you do!
+
+There are definitely [different schools of thought](https://blog.ongig.com/writing-job-descriptions/about-us-section-end-or-beginning-of-job-posting/) about how long the introductory "About Us" section of a job description should be.
+
+The linked article makes an interesting point that:
+
+> Most search engine optimization experts agree that Google weighs your opening paragraph more than they do the rest of your web page.
+What that means is:
+If you open with an About Us statement, then you are indicating to Google that your job posting is more about your company history than the job.
+If you’re looking for a software developer, and the phrase “software developer” is not in your opening paragraph, then Google is unlikely to send candidates to your job posting.
+
+Plus, it could be argued that the posting is more about the <em>job and the candidate</em>, rather than the company itself. 
+
+But conversely, a company has to quickly and effectively "sell" itself to you as an applicant if it wants to attract the very best talent - just like you have to do when you want to get the very best jobs!
+
+If you don't effectively sell the company as an exciting/prestigious/fun place to work early, the candidate might not even make it down to the end of job description to learn all about your company.
+
+If you're a professional tasked with writing a job description from scratch, I think this is a good example of how you can frontload with the "elevator pitch" for your company without overdoing it.
+My advice would be do one paragraph of pitching why your company kicks ass as an employer at most, then it's time to get into what the hell you're hiring for.
+
+The next section of this I really like from a candidate's point of view. This is a <em>great example</em> of a well-titled job and a simple, effective description of what the job actually is.
+
+> The Customer Success Manager ensures that our clients and Bishop Fox realize value from our products and services. They have an in-depth understanding of the offensive cybersecurity industry and are responsible for managing client satisfaction and increasing customer engagement with Bishop Fox offerings.
+
+Not too much jargon and effectively gets the gist across in a single paragraph. If I'm reading this and nothing else, I know that if I had this job my role would be managing a pool of customers and making sure that overall, those customers of Bishop Fox were getting the absolute maximum out of the products and services they purchase. 
+
+In other words, I am <em>managing</em> the <em>success</em> of <em>Bishop Fox's customers</em> - and that genuinely is what our CSMs do, and they're really damn good at it.
+
+The <strong>Responsibilities</strong> section is where this job descriptions sets itself apart from a lot of others, though:
+
+
+1) Notice how each one of the bulletpoints are written in plain English?
+
+I don't even work in the area of the business that this advert is for, but by reading this list I'd have a very clear idea of what's expected of a Customer Success Manager and can then accurately map this to my internal list of skills and comptencies.
+
+From there, I can make a judgement on whether it's suited for me quickly and effectively.
+
+
+2) Notice how there isn't an enormous list of requirements and that they're all relevant?
+
+Nobody is being asked to also be able to penetration test in addition to the customer relations and oversight functions that comprise the majority of this job.
+
+They aren't being asked to manage social media accounts or go out and prospect for new business.
+
+The requirements in this list are targeted to what the role in question <em>actually does day-to-day</em> and what that role could <em>reasonbly be expected</em> to stretch to.
+
+"Reasonably" here is a word that is pulling overtime - stretch this aspect too far, and you stray into "bad job description" territory here.
+
+
+3) Notice the list of <em>tangible</em> objectives the Customer Success Manager will be responsible for?
+
+I know (before I even apply) what I'm going to be expected to deliver from this:
+
+- Drive customer renewals
+- Report customer success metrics back up the management chain.
+
+My advice here to those responsible for writing job descriptions who want to do this too is pretty simple.
+
+> Know your patch well. The reason this section works so well is because the person that wrote it has a good understanding of what the role actually entails. They've talked with current CSMs and learnt what is and isn't relevant to their role.
+You're only going to build that level of understanding through putting the groundwork in and understanding the role, what they're expected to do and how they fit into the larger business.
+
+<Image src="/images/blog/hacking-the-hiring-process-images/bishopfoxjobspec2.png" alt="Sure, its a bit of hometown pride, but indulge me." />
+
+Last up is the <strong>Requirements</strong> section of the job description.
+
+There really isn't too much to putting a good requirements section together.
+
+Do the work to understand:
+
+- What skills can be trained on-the-job, 
+- Whether there is appetite for training and development (allowing for hiring of less experienced candidates),
+- Whether the requirements make sense <em>for</em> the role based on a good understanding <em>of</em> said role.
+
+Don't put <em>"Needs Masters degree in cybersecurity"</em> for a role that happens to be in cybersecurity but doesn't fundamentally need that level of technical know-how.
+
+Speaking of technical know-how:
+
+- Don't put "CISSP required" for every early-stage consulting and technical job, because it's a certification that literally requires 5 years of documented experience to obtain and is strongly management-focused.
+- Don't put "OSCP required" for any job that isn't penetration testing or directly adjacent to it - this is a difficult certification that directly tests practical enumeration and exploitation skills and not much else.
+- You're never going to keep up with the contents and constantly moving requirements of every cyber certification - so if you can just say <em>"Relevant cybersecurity qualifications - e.g [insert list of certifications](not exhaustive)"</em> instead of specifying one, go for it.
+- Consider allowing for other non-educational evidence of skill and experience: publications, GitHub projects, portfolio pages etc. in lieu of certifications and stating so clearly in the job advert.
+
+Alright, now we've looked at a job advert done well, it's time for the pendulum to swing the other way!
+
+<strong> What does a BAD job description look like? </strong>
+
+<Image src="/images/blog/hacking-the-hiring-process-images/badjobdescription1.png" alt="This one is just a taaad unrealistic?" />
+
+To keep this article at a fairly readable length, we're not gonna fully break down this advert in its entirety.
+
+We will break down where it's falling down, though - and provide you with a list of "red flags" to look out for on your job hunts.
+
+<strong>Job Advert Red Flag #1: Vague Requirements</strong>
+
+This advert was an example I found on Reddit for a network engineer-type role. 
+
+Network engineers (for those unfamiliar) are tasked with keeping network devices up-to-date and functional, ensuring that network connectivty stays available and at high quality and restoring connectivity when things go sideways.
+
+Here's our first problem: <em>lack of specificity.</em>
+
+- "Knowledge of network protocols" - which ones?
+- "Knowledge of configurations" - of what? Routers? Switches? Firewalls? Software-defined networking? Virtual appliances?
+- "NAT and Trunking" - Not only is this not in the list with the rest of the requirements, these are just networking concepts without any concept of <em>why</em> you need to know these.
+
+Different brands of networking hardware sometimes work very differently and often have proprietary software and commands that engineers need to learn to effectively do their jobs.
+
+Working with virtual network appliances or cloud-based networking services is often very different from the skills developed in more traditional on-premises networks.
+
+With this level of vagueness, how do they know what experience they have is relevant and what they might need to go learn?
+
+
+<strong>Job Advert Red Flag #2: Upfront Mention of "working under pressure"</strong>
+
+Nobody gets into technology or cybersecurity expecting it to be 80% playing HALO in your underwear - hard work and occasional pressure situations are a given part of the territory.
+
+In my experience though, it has been an accurate red flag when one of the <em>first sentences</em> in your job advert says the following:
+
+> Ability to work under stress/pressure in order to meet deadlines and company objectives.
+
+Right from the jump, you know that your workload expectations will come second to a deadline or company objectives pretty much every time.
+
+With those requirements and deadlines often having little to zero connection to the <em>reality</em> of what the engineer needs to do to meet them,
+what this often translates to is a job where your workload can and will expand without notice to meet capricious organizational goals or deadlines.
+
+In my experience, if they're being this upfront about the presence of stress and pressure in the job, it will quickly tire and burn out many professionals that go on to do it.
+
+<strong>Job Advert Red Flag #3: Experience Requirements Are Inappropriate/Not In Line With Stated Benefits</strong>
+
+<Image src="/images/blog/hacking-the-hiring-process-images/badjobdescription2.png" alt="This one is just a taaad unrealistic?" />
+
+The rest of this job advert isn't too bad, the requirements make sense and expectations are reasonable....right up until the end.
+
+A company has every right to set whatever educational or experience requirements they like for their jobs, as long as they are in accordance with the law.
+
+What they can't do though, is complain that no-one is applying to their listing when those requirements are very high and the stated pay is <strong>$10 an hour</strong>!
+
+5 years of experience isn't hugely out of line with expectations of a mid-level career stage, and a bachelor's degree is a pretty commonplace expectation these days.
+
+However, nobody - and I mean <em>nobody</em> - is going to take 5 years of networking experience and a bachelor's degree and work at a place paying less than most supermarkets.
+The reward for the employee simply doesn't match the expectation from the employer, and the results will show.
+
+If you're an employer, this is going to take some real self-awareness of where your company sits in the labor market and what you can offer a candidate.
+
+- If you can't afford to pay the highest wages and offer a range of perks, then that's completely fine as long as your expectations are in line with that.
+- You won't be able to compete at the highest level for top-tier talent, and will likely find much more success looking for earlier-stage, developmental talent.
+- This requires self-awareness on the part of the organization, excellent work on the part of the person writing the spec to communicate that self-awareness effectively and the organizational machinery to effectively onboard and train that developmental talent.
+
+You'll get better results this way then throwing up the same job listing with unrealistic expectations every 4 months and churning through people, I would heavily wager.
+
+<strong>Other Job Advert Red Flags To Look Out For </strong>
+
+- <em>"We're looking for ninjas/gurus/rockstars"</em> usually equals <em>"We need multiskilled people to do the job of 3 for the pay of 1"</em>
+- <em>"We work hard and we play hard"</em> usually equals <em>"We will work you brutally hard"</em> but I've never once seen one of these companies "play" as hard as they "work". Expect an exhausting work environment.
+- <em>"Relentless", "scrappy", or "fast-paced"</em> usually equals <em>"awful work-life balance and expectations to match"</em>
+- <em>"We're like a family here" </em> - You're either in for a work environment with little to no boundaries, or you've joined a cult - either way, <strong>run</strong>.
+
+For more red flags in tech postings to watch out for, check [this article here](https://www.dice.com/career-advice/8-red-flags-in-tech-job-postings-you-shouldnt-ignore).
+
+If you're writing job descriptions and want to avoid these and better target candidates, check [this article here](https://blog.ongig.com/writing-job-descriptions/poorly-written-job-descriptions-examples/) about poorly written job descriptions.
+
+Lastly, if you are at all able to give <em>some indication</em> of how much the expected compensation for the job is going to be, for the love of all that is holy <strong>put it in the job description.</strong>
+
+<hr></hr>
+
+### How To Break Down a REAL Job Description from LinkedIn
+
+Alright, let's put everything we've learned to use and break down a real job listing from LinkedIn.
+
+To find this one, I just typed in "cybersecurity analyst" into LinkedIn Jobs and this was literally the first one that came up.
+
+<em>Note: I am acutely aware that this is my external opinion of this job and have no connection with the company or the job's hiring manager, this is just an illustration of how to use the skills we've been talking about.</em>
+
+<Image src='/images/blog/hacking-the-hiring-process-images/cybersecanalystjobdesc1.png' alt="Literally the first job description for Cybersecurity Analyst that came up" />
+
+Firstly, I really like the extremely clear Position >> Department >> Reports To >> Location section at the top. 
+
+You immediately know what the position's title and working department is within the organization, where you need to be geolocated and where in the hierarchy you sit.
+This is all very useful information to know for later in the interview process.
+
+The <strong>Company Summary</strong> section is pretty industry-standard for a lot of financial services firms and likely comes from marketing copy describing the company on other material. Not much to glean here.
+
+The <strong>Position Summary</strong> is a bit more interesting. The description seems fairly accurate for a Cybersecurity Analyst role and points towards a more governance and policy-oriented type of security analyst role.
+
+This is really useful, as we can compare that with our internal compass and see if it's something we'd be happy doing.
+
+Two issues do immediately strike me with this section, though:
+
+- <strong>Designing</strong> an effective cybersecurity policy requires a very specific set of skills than <strong>maintaining and enforcing them </strong> and potentially more seniority that an analyst might not have at their disposal.
+- The end sentence mentions that in the following section are "the primary responsibilities of the Information Security <em>Officer</em>", when the job is specifically for an Information Security <em>Analyst</em>.
+
+This mismatch of title and expectations could simply be a typo, or coupled with the first issue it may point to a greater potential misunderstanding of what the scope of the Information Security Analyst role actually is at this company.
+
+Something to keep in mind before and after applying, for sure.
+
+<Image src='/images/blog/hacking-the-hiring-process-images/cybersecanalystjobdesc2.png' alt="Literally the first job description for Cybersecurity Analyst that came up" />
+
+Let's look at the <strong>Primary Responsibilities</strong> section next, keeping in mind that this role is ostensibly for an <strong>Information Security Analyst</strong>:
+
+- <em>"Information Security Policies"</em> - Pretty vague, but makes sense with what we learned before during the Position summary section.
+- <em>"Risk Management, including vendor risk management"</em> - This is pretty vague and would ideally describe what this role's contribution and/or expected ownership over this enormous process might be. 
+      But this <strong>is</strong> relevant to the job!
+- <em>"Security Awareness Training"</em> - Ehh, this is where we start to get wobbly on the rails. As someone who has developed multiple cybersecurity training courses and curriculums for multiple companies at a professional level, this is <em>not</em> a skill you can just throw in as an expected competency for an <em>analyst</em>. Whilst somewhat relevant, this is a specific and separate role in and of itself.
+- <em>"Threat Intelligence and Vulnerability Management"</em> - You might wanna keep your hands inside the ride at all times, we're heading <strong>off</strong> the rails now. Not only are these two entirely separate sub-fields of cybersecurity from each other, they each require very different skillsets from the governance and policy-related analyst role described at the top of this listing.
+- <em>"Cybersecurity risk assessments, audits and testing"</em> - This is more the job of an internal audit department in my experience, but I can understand that a company might think it tangential to the work of an information security analyst, especially a governance and policy-focused analyst.
+- <em>"Strategic planning, including recommending and implementing new security solutions"</em> - We're fully in "the next train is coming past us after our derailment" territory now. Strategic planning is the job of <em>leadership</em>, suggestions and design of new security solutions is the job of a <em>security architect</em> (not an analyst) and the implementation, operation and maintenance of that solution is the job of an <em>entire security team</em>.
+- <em>"Data privacy and data protection"</em> - Certainly a useful knowledge area to have as an analyst, but data privacy and data protection are sub-fields of cybersecurity in and of themselves - what knowledge/skills does the analyst need from this area?
+
+So overall, what do we think? 
+
+Honestly, in my opinion, this job listing is all over the place - but has both good spots and room for improvement.
+
+Are the listed subject areas <em>required experience areas</em> or is <em>subject matter knowledge</em> enough? 
+
+It's not clear from this listing.
+
+The relative difficulty in locating and difference in expected salary for an analyst that <em>has awareness and knowledge</em> of all these things and an analyst that can <em>actively do and perform</em> all of these things is going to be dramatic.
+
+If knowledge is enough, then the specific areas of knowledge needed should be clarified within the listing.
+
+If tangible experience of delivery is required for all of this, then this listing becomes <strong>very unrealistic, very quickly.</strong>
+
+Anybody who can teach, do risk management, threat intelligence, vulnerability management, plan at the strategic level and then design and implement new security solutions (all at the same time) needs to be starting their <em>own</em> company, not working in what is titled as a junior-to-mid level role.
+
+Let's look at the <strong>Qualifications</strong> section next, to see how it stacks up.
+
+- Most of these requirements seem pretty reasonable considering the role, if you ask me.
+- For once, CISSP is a legitimately useful and relevant certification for a job listing it's on! 
+- Financial services experience is a very sensible ask considering what the company does.
+
+The only requirement that raised my eyebrows was the specific mention of needing a CompSci degree (or equivalent).
+
+If they've already stated that this job is policy and procedure oriented, I'm not sure if asking for a technically-oriented degree like this makes sense as opposed to a more risk management oriented major?
+I guess it depends how far you can stretch the "or equivalent" when it comes to interview!
+
+Any <strong>red flags</strong> we can spot using our new-found skills?
+
+Really, only the one - the <strong>Special Requirements</strong> section at the bottom of the listing, which reads:
+
+> Job may require working beyond regular business hours on an as needed basis.
+
+Let me be totally clear: I'm absolutely no stranger to working late in emergency situations or when a project just needs all hands on deck to get done.
+
+Where this becomes a red flag in my experience is the "as needed basis" part. That's an awfully wide loophole to give yourself.
+
+Who decides what "as needed" means and what "as needed" requests are reasonable? 
+I'd bet all the money I have that it's sure as shit not going to be the applicant.
+
+Expectations like this in practice tend to dissolve the healthy boundaries between an employees' life outside of work and their job role.
+As a result, burnout and eventual dissatisfaction with the job swiftly follow.
+
+Is that what this company is going to do? I couldn't possibly know without working there.
+
+Would I be keeping a vigilant eye out and asking direct questions about this statement at interview? <strong>Absolutely.</strong>
+
+<hr></hr>
+
+<strong>Conclusion: Would I Apply To This Job?</strong>
+
+Let's collect our main takeaways:
+
+<em>Pros:</em>
+- Clear description of title, location and reporting structure (Initial text of listing)
+- Policy and procedure focused role (Position Summary)
+- Multiple relevant responsibilities (Primary Responsibilities)
+- Fairly reasonable set of qualifications (Qualifications)
+
+<em>Cons:</em>
+- Mistitling of job from Position summary could be just a typo, but could also point to lack of understanding of role's responsibilities or copy-pasted job title (Position Summary)
+- Multiple fairly solid examples of unrealistic and tangential at best requested expertise areas (Primary Responsibilities)
+- This job sounds like they want someone who can do the job of an entire security team, not an analyst (Primary Responsibilities)
+- Degree of expertise and specific expertise required not included (vagueness) (Primary Responsibilities)
+- Potential red flag due to callout of bending expected work hours on an "as-needed basis" with no direction as to who would dictate that.
+
+Collecting all our findings up, this listing tells me that this company is expecting a <em>lot</em> out of whoever does this job and wants a multifaceted, talented analyst with a <em>wide</em> range of expertise.
+
+It also tells me that they might not have the best grasp on what a information security analyst should reasonably be expected to do (and be able to do).
+
+The asks run the gamut from trainer, auditor, threat analyst through to vulnerability management - that's a good chunk of a security program in one listing!
+
+The "Job may require working beyond regular business hours on an as needed basis" rings alarm bells for me, personally. 
+
+I've not once seen a company expecting this maintain a healthy balance between work expectations and the employees life outside of work.
+However, I fully admit that this is colored by own experience and observations.
+
+Overall, I think this listing is a very mixed bag but wouldn't necessarily put its cons down to malice.
+I think this is a listing that came about for the same reason as we spoke about earlier - it wasn't a techie that wrote it.
+
+I'd personally throw an application in for this one but hike up my salary expectations accordingly and drill specifically into the "Special Requirements" section of this listing when I made interview.
+
+<hr></hr>
+
+### Bonus: What The Hell Does "Entry-Level Job" Mean Anymore?
+
+There's a lot of discussion around whether there are enough "entry-level" jobs anymore, how ridiculous the requirements are around them and how insane the competition is for them.
+
+I just wanted to share a fantastic video from my favorite YouTube channel, [Answer In Progress](https://www.youtube.com/@answerinprogress) that deals with this very subject!
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bR2qUXmqgv4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+They break down why a lot of "entry-level" jobs might not seem that way, and why they ask for 2-3 years experience. 
+These reasons include:
+
+- The experience requirement allows for extra data points to differentiate candidates from each other
+- An employer can make a working assumption that a candidate with <em>some</em> experience at least has a knowledge of what the working environment demands of them.
+- They know to turn up on time, that they might not always get to do exactly what they want, that deadlines matter etc.
+- Cost reduction - an employee with experience will become productive faster and require less training overall than a completely fresh worker out of college, costing the company less to bring onboard.
+
+The most interesting aspect of this video, I found, is that our understanding of what "entry-level" work is might need to change.
+
+With a lot of traditional entry-level work being outsourced or automated by software, the lowest-rung jobs in jobs like IT etc. now require competencies and skills that education alone might not give you.
+
+Hence, entry-level jobs requiring experience!
+
+I agree with a lot of this video and think it takes a very even-handed approach to the subject.
+
+I also wanted to share a second video from another YouTube channel I greatly enjoy - [Joshua Fluke](https://www.youtube.com/@JoshuaFluke1).
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NaPezvkzl8U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+This video is all about viewing job descriptions less as a list of hard and fast requirements, but instead as a "wishlist" and <strong>applying anyway</strong> in more cases.
+
+Joshua has some strong takes and I certainly don't agree with all of them, but I do on this one.
+
+I've had a lot of success by following this rule - If I:
+
+- Can do 70-80% of the role's requirements, 
+- I think I could learn the other 20-30%  on the fly,
+- The job sounds interesting and/or fun,
+
+I just apply - no equivocating, no worrying about it, I just...<em>apply</em> and see what happens.
+
+This approach inevitably increases the pool of jobs that you end up applying for, and thus increases the chance of a favorable response back.
+
+Notice I said that I didn't say that I was applying for jobs I was <em>unqualified for</em>, I said I was applying for jobs that I <em>wasn't necessarily 100%-ing the stated requirements</em> for.
+
+The difference between these is <strong> gigantic </strong> - if you're applying for roles you're fully unqualified for then you need to either do some studying or change your approach!
+
+<hr></hr>
+
+## TL;DR / In Conclusion
+
+Job hunting is an exhausting, often miserable numbers game - but it doesn't necessarily have to be this way.
+
+If you're a candidate, the skills we've learned over the course of this article should give you everything you need to "qualify out" opportunities you see that might not be a good fit.
+
+If you're a recruiter or someone tasked with writing a job description, we've gone over some useful points and resources that will help you write more compelling and attractive job adverts.
+
+Things to note:
+
+- A lot of job adverts for technical jobs were not written by people who do the job. 
+- This is both a drawback and an opportunity!
+- If you're a <em>candidate</em> reading this: a lot of descriptions you will see are not hard-and-fast sets of requirements, but closer to a shopping list or "wishlist"
+- If you can do the lion's share of what a job spec says and the job sounds like fun, just start applying and see where you get!
+- If you see something that concerns you on the job spec, make sure to bring it up during interview - it's very likely nobody interviewing you other than the recruiter who wrote it saw it. You may find the red flag turns green in the end!
+- If you're a <em>recruiter</em> reading this: Wherever you can, make it clear why you are asking for X, Y and Z and be as specific with the requests as possible. 
+- Work invested in really understanding the role and writing a description to match will absolutely result in better candidates applying. 
+- If you're able to, <em>please</em> put the salary or even a ballpark range in the job advert - it is pretty much the only thing a candidate initially cares about and your honesty will be appreciated.
+
+<hr></hr>

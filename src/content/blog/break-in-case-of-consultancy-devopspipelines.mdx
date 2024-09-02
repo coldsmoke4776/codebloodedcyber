@@ -1,0 +1,332 @@
+---
+title: "Break In Case Of Consultancy: DevOps Pipelines"
+date: "2023-01-04"
+author: "Matthew Twells"
+description: "Technical breakdowns for non-practioners in (somewhat of) a hurry. Time to get up to speed on DevOps, what it is and how modern software gets written safely and quickly."
+tags: ["DevOps", "CI/CD", "Software Development"]
+---
+
+import { ArticleLayout } from '@/components/ArticleLayout'
+
+export const meta = {
+  author: 'Matthew Twells',
+  date: '2023-01-04',
+  title: 'Break In Case Of Consultancy: DevOps Pipelines',
+  description:
+    'Technical breakdowns for non-practioners in (somewhat of) a hurry. Time to get up to speed on DevOps, what it is and how modern software gets written safely and quickly.',
+    }
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+<Image src="/images/blog/break-in-case-of-consultancy-images/actualgermanpipeline.jpg" alt="Sadly, wrong kind of pipeline!" />
+
+Break In Case Of Consultancy is a series of articles designed to serve as 
+emergency primers on a range of subjects that you'll likely be forced to brush up on
+at the last second - usually before a meeting or an engagement starts.
+
+This one particular is everything you need to know to get through an engagement on <strong>DevOps and DevOps Pipelines.</strong>
+
+<hr></hr>
+
+## What Is DevOps And How Did We Get Here?
+
+<Image src="/images/blog/break-in-case-of-consultancy-images/devopspink.jpg" alt="DevOps" />
+
+Ask three different people in tech what DevOps actually means in the real world, and you'll likely get three different answers.
+
+Ask a stressed-out front-end dev and you'll hear something along the lines of:
+
+> “So what do you do?” “I’m lean,” “What?”, “I’m agile,” “What?”, “Fine. I make websites.” - @iamdevloper
+
+Ask a technical leader or senior product manager and you'll hear something like:
+
+> “To successfully implement continuous delivery, you need to change the culture of how an entire organization views software development efforts.” – Tommy Tynjä
+
+The closest answer that most agree on as at least being half-accurate, though is this:
+
+> “Currently, DevOps is more like a philosophical movement, not yet a precise collection of practices, descriptive or prescriptive” - Unknown
+
+If you've never heard of DevOps before in your life, what people are referring to when they say "DevOps" is a set of practices, tools and techniques
+that combine both:
+
+- Software development, where code and software gets written (the <strong>Dev</strong> portion), and 
+- IT operations, where stressed-out people strung out on coffee keep everything running (the <strong>Ops</strong> portion).
+
+You don't <em>install</em> DevOps or <em>do</em> DevOps - think of it more as the framework under 
+which your organization thinks about software, creates software and maintains/updates software.
+
+### Don't Go Implementing Waterfall, Stick To The Rivers And The Lakes That You're Used To
+
+The rise of DevOps as a software development philosophy marks a big departure from the classical 'Waterfall' model that was in use for decades.
+
+Waterfall is a method of breaking down all the activity that make up successful software development into a series of <strong> linear, sequential steps.</strong>
+
+One step's work and output feeds directly into the next step, flowing downwards like a waterfall.
+Roughly the steps of the Waterfall approach are as follows:
+
+- <strong>System and software requirements</strong>: What does the client want, exactly?
+- <strong>Analysis</strong>: What does the thing we're building need to do, exactly?
+- <strong>Design</strong>: How should the thing we're building look and feel, and how will it work?
+- <strong>Coding</strong>: Time to build the thing!
+- <strong>Testing</strong>: Does the thing we're building work how it's supposed to?
+- <strong>Operations</strong>: The thing is built now, time to hand it over to the people who'll keep it running!
+
+This all makes sense when you look at like this, written down on paper. 
+
+Anyone who's spent a nanosecond in software development, 
+project management or consulting though, will happily tell you that your client will <strong>never, ever, ever</strong> have a laid-out, 
+concrete set of requirements that won't change after.
+
+Waterfall depends on the work in one step being finished almost completely before moving onto the next step. 
+
+When your client inevitably reads something on LinkedIn and wants to implement it 4 months in, or decides they want to use a different
+type of data source entirely, you have to abandon your current progress and go back up the waterfall to re-do your work.
+
+This slows down the software development lifecycle (SDLC) considerably, and just generally gets on everyone's tits.
+
+### I Don't Have A Complete Agile Joke Yet, But Check Back After Next Sprint?
+
+After Waterfall came Agile. 
+
+The butt of a billion jokes about Scrum Masters and Jira tickets, Agile software development 
+is a method of software development that came to popularity in the 1990s/2000s.
+
+Agile software development is all about breaking down large projects into a series of smaller chunks, approached in teams at great pace.
+
+Agile refers to these bursts of heavy activity as <em>"sprints"</em> and any Agile project will consist of several sprints.
+
+Each sprint will be run by an (ideally) skilled project manager who facilitates daily/near-daily 
+status meetings and discussions called <em>"standups"</em> or <em>"scrums".</em>
+
+The feature, target or "thing" the sprint is aimed at producing or finishing is referred to as a <em>"deliverable"</em>,
+of which there will be many over an entire Agile project lifecycle.
+
+At the end of a sprint, the project manager gets the team together to discuss 
+what went well, what didn't and what should be learned for the next sprint in a meeting 
+called a <em>"retrospective"</em>.
+
+Agile is governed by 12 major principles, of which some of the most important are shown below:
+
+- Customer satisfaction by early and continuous delivery of valuable software. (Referred to as <strong>CD</strong>)
+- Welcome changing requirements, even in late development. (This is the <strong>'agile'</strong> part!)
+- Deliver working software frequently (weeks rather than months). (<strong>Sprints!</strong>)
+- Close, daily cooperation between business people and developers. (<strong>Agile standups/Scrums!</strong>)
+- Working software is the primary measure of progress. (<strong>Deliverables!</strong>)
+- Sustainable development, able to maintain a constant pace. 
+- Simplicity — the art of maximizing the amount of work <em>not</em> done — is essential.(More <strong>'agile'!</strong>)
+- Regularly, the team reflects on how to become more effective, and adjusts accordingly. (<strong>Retrospectives!</strong>)
+
+Agile is all about breaking down tasks and making the SDLC more efficient and productive, and allowing teams to
+adapt to the inevitability of changing customer requirements.
+
+Despite all its benefits, Agile isn't perfect - as anyone who's been stuck in their third standup of the morning in a row can tell you.
+
+The administrative overhead of tracking sprints and running standups requires a skillset in shepherding people,
+resources and an ability to navigate consistent chaos.
+
+Sometimes that skillset doesn't come as naturally to those who've spent their careers so far, you know, developing software.
+
+Those individuals with the communications, organization and management skills to do that job often built
+that skillset at the expense of deep technical expertise in the work they're shepherding to completion.
+
+This often leads to tension (and sometimes outright conflict) between project managers/Scrum Masters and the developers on their teams.
+
+Scrum became the dominant form of Agile development in the early 2000s and is still an extremely popular form of Agile in many corporate teams.
+
+Due to the rise of automation technology and Scrum's omission of a lot of the engineering practices that developers/engineers liked, groups of individuals
+who embraced automation in the development process eventually splintered off into what would become....
+
+### Modern DevOps
+
+We now arrive at modern DevOps, which focuses on the continous integration, building, testing, delivery and deployment of software.
+
+It doesn't much matter anymore whether this software was written under Waterfall, Agile or any other SDLC philosophy - DevOps principles can be applied 
+
+The main differences to take note of regarding DevOps as a development philosophy are:
+
+- DevOps is primarily used to build software in what we call a <strong>microservices architecture</strong>, rather than the classical <strong>monolithic architecture</strong> from decades past.
+
+- Microservices will undoubtedly get their own BICOC article soon, but for now just imagine breaking one big piece of software into its constituent parts and treating each separately.
+
+- DevOps represents a <em>big cultural change </em> from times before, with operations, developers, project managers and testers working a lot closer together than they ever did before.
+
+- DevOps is geared towards the use of <strong>automation</strong> wherever possible, to ensure consistency, reliability and enhanced speed of software delivery.
+
+- Entire teams of developers will work on the same codebase, sometimes even the same files with <strong>version control</strong> being massively important in tracking changes, avoiding conflicts and making sure builds and deployments occur reliably.
+
+<hr></hr>
+
+## The DevOps Cycle & Associated Concepts
+
+<Image src="/images/blog/break-in-case-of-consultancy-images/DevOpsCycle.svg" alt="The DevOps Cycle" />
+
+The DevOps Cycle refers to a rough set of steps that any project done under this approach will go through:
+
+- <strong>Plan</strong>: Define the business case, requirements, metrics, release plan, and timing.
+- <strong>Create</strong>: Design the software and code it until you have a reliable release candidate.
+- <strong>Verify</strong>: Testing the software to ensure it meets the agreed requirements.
+- <strong>Package</strong>: Transforming the software into a releaseable state and moving it from a development environment into a pre-production or 'staging' environment, whilst the software gains the required approval(s) to release into production.
+- <strong>Release</strong>: Scheduling, orchestrating and eventually releasing the software into the production environment, whilst planning for failure and rollback if issues occur.
+- <strong>Configure</strong>: Into operations DevOps now, provisioning and configuring any required storage, access, compute or networking requirements the software needs to operate effectively.
+- <strong>Monitor</strong>: Monitor software performance, error rate, user experience and gather feedback to feed into next Plan phase.
+
+When we say <em>software</em> here, we're not talking about entire working programs. 
+
+DevOps is all about producing workable, usable features for an overall software project and <strong>continously integrating code, continously delivering working software and continuously deploying that software</strong> into production.
+
+We call this continous process <strong>CI/CD.</strong>
+
+<hr></hr>
+
+### Continous Integration (CI)
+
+<Image src="/images/blog/break-in-case-of-consultancy-images/CIdiagram.png" alt="Continuous Integration (CI)" />
+
+<strong>Continuous Integration</strong> is a pivotal part of DevOps software development, and refers to
+the practice of <strong>integrating</strong> all the working developer copies of various source code files into <strong>one shared mainline
+codebase,</strong> often multiple times a day.
+
+Here's an issue though: if there are dozens of other developers working and submitting their own changes,
+will the copy of the codebase the developer downloaded even be accurate? 
+
+What if in the meantime, new code and new libraries have been added?
+
+What if the changes one developer made conflict with the changes another developer made?
+
+Merging and integrating code without CI can lead to a situation where merging/integrating 
+new code takes longer than writing the new code itself - a situation called <strong>merge hell.</strong>
+
+That's the problem CI aims to solve!
+
+As the diagram above shows, DevOps teams can consist of dozens or hundreds of developers - each working on their own unique thing.
+
+When developers go off to make a change to a file, they download a copy of the current codebase to work on.
+
+They make their changes and eventually they've finished the "thing" they're working on.
+Now what?
+
+The developer will likely then run a series of <strong>unit tests</strong> on their own local machine to look for major flaws and issues.
+
+All of these tests should pass without issue before the developer attempts to <strong>commit</strong> their code to the shared mainline codebase.
+
+Ideally multiple times a day, developers will then submit their source code in the form of a commit to a <strong>shared code repository.</strong>
+
+A <strong>build server</strong> (normally on the same platform, but doesn't have to be) then takes the collective source code and builds a version of the application.
+
+Integration tests, security scans and several other tests/scans then occur to ensure that the changes the developer made
+do not break the application and stop it from compiling. 
+
+If the build is successful and the tests all pass, then the test results and proposed code to be merged in gets sent to an approver,
+who then actions the integration of the new code into the mainline codebase, to be downloaded alongside all the other code when the next developer takes their copy.
+
+This submission, testing, building and integrating should be happening all the time, with a minimum time between build and commit.
+
+The process should be more or less continous, hence <strong>continous integration!</strong>
+
+<em>Note: For a breakdown of Git, repositories, version control, branching, pull requests and commits - see this Break In Case Of Consultancy article.</em>
+
+Examples of CI tools you might see in the wild include:
+
+- <strong>Bamboo</strong>
+- <strong>TravisCI</strong>
+- <strong>CircleCI</strong>
+- <strong>GitLab CI</strong>
+- <strong>TeamCity</strong>
+
+<hr></hr>
+
+### Continous Delivery and Deployment (CD)
+
+<Image src="/images/blog/break-in-case-of-consultancy-images/CDevdiagram.png" alt="Continuous Delivery (CD)" />
+
+<strong>Continous Delivery (CD)</strong>, you'll be happy to know, is a bit simpler a concept to grasp than
+a lot of the other stuff we've looked at in this article!
+
+CD is an approach to software development that slightly deviates from the pure DevOps approach, but
+still aims to speed up the process through producing software in short cycles.
+
+The idea behind CD is that software written in short cycles can be automatically moved 
+through a "production-like" environment and go through a series of automated tests (as seen in the above diagram).
+
+Eventually, what comes out the other end (after all the tests pass) is software that can be reliably relased into production
+at the press of a button.
+
+Crucially, the final release step into production is <strong>manual</strong> in a continous delivery workflow.
+
+This differs from  <strong>continous deployment (also abbreviated to CD)</strong>, where that final push into production is also automated.
+
+Examples of CD tools you might see in the wild include:
+
+- <strong>AWS CodeDeploy</strong>
+- <strong>GitLab</strong>
+- <strong>DeployBot</strong>
+- <strong>Jenkins</strong>
+- <strong>Bamboo Deploy</strong>
+- <strong>Octopus Deploy</strong>
+
+<hr></hr>
+
+### DevOps & CI/CD Pipelines
+
+Almost all organizations that have a DevOps culture will organize their tools, services and processes into
+a (somewhat) clear sequence of steps, actions, tests and acceptances that take code from an idea, to a developer's laptop, all the way through into production.
+
+We call this sequence of steps a <strong>DevOps pipeline</strong> or a <strong>CI/CD pipeline.</strong>
+
+If you're a consultant, recruiter or salesperson working with any large company that writes their own tools or develops their own code,
+don't be surprised to see a DevOps or CI/CD pipeline being used.
+
+Hell, I even use a very simple CI/CD pipeline to create/update the website you're reading right now!
+
+<Image src="/images/blog/break-in-case-of-consultancy-images/AWSAmplifyCBC.png" alt="AWS Amplify Screenshot" />
+
+- I write JavaScript code and Markdown (MDX) articles on my local machine in the Visual Studio Code (VSCode) IDE.
+- My VSCode is integrated with my GitHub account and the repository this site's code sits in.
+- That GitHub repository is linked into Amazon Web Services (AWS), my cloud provider of choice.
+- Everytime I commit a change to GitHub from VSCode, my application gets built in AWS Amplify.
+- AWS Amplify launches a Docker container to hold my application and compiles the collected code.
+- Once done, the compiled application is pushed into "production" (my AWS environment associated with the codebloodedcyber.com domain)
+- Any issues are returned to me as error logs and failed builds, which I fix and then re-attempt this process.
+
+In the corporate world, however, these DevOps or CI/CD pipelines can get significantly more complicated:
+
+<Image src="/images/blog/break-in-case-of-consultancy-images/CICDpipelineexample.png" alt="SAP Screenshot of CI/CD pipeline" />
+<em>Credit to https://www.basistechnologies.com/what-is-ci-cd-for-sap/ for the example pipeline diagram</em>
+
+You should understand a lot more of this diagram after reading all of this, 
+but you can see how this example corporate-grade DevOps pipeline is signficantly more complex than mine.
+
+Overall though, even though some of the steps have different names,
+you can see that the fundamental DevOps cycle is being followed.
+
+<hr></hr>
+
+## TL;DR / In Conclusion
+
+Writing software has changed a LOT over the last decade or so - from monoliths to microservices, from Waterfall through to DevOps.
+
+What used to take months of planning, coding, testing and scheduling to release, now happens continously.
+
+Teams work quickly and near-constantly to update features and get them shipped out to customers in production.
+
+There's still a process, though: just one that is now heavily reliant on automation 
+and collaboration between the development teams <em>writing</em> software and those responsible for the continued operation <em>of</em>> that software.
+
+Things to note as security consultants or interested parties:
+
+- If you're consulting on or auditing a DevOps team or workflow, be very considerate of time. 
+- These people are constantly operating at speed, every walkthrough you need to "get up to speed" is another hour they're falling behind.
+- As always, study up on your clients beforehand as a mark of respect for their time, and to make your life easier.
+- Due to the workloads and deadlines these teams are often under, auditors and consultants should look for <strong>documentation and written processes</strong>, first and foremost.
+- After that, look at records of <strong>code respository commits, unit test results, build artefacts and merges to the master mainline codebase.</strong>
+- These should be coupled ideally with documented <strong>change records/requests</strong> in some sort of ticketing system like <strong>Jira or ServiceNow.</strong>
+- Auditors and consultants need some sort of proof that all of these steps are being followed and that artefacts are being kept.
+- Other areas to look at from a security perspective should be <strong>identity & access management, privileged access provisioning and vulnerability scanning/management/remediation.</strong>
+
+<hr></hr>
+
+If you enjoyed this article, check out the other articles in the <strong>Break In Case Of Consultancy</strong> series:
+
+- Break In Case Of Consultancy: Git, Version Control & Branching
+- Break In Case Of Consultancy: Microservices & Containerization
+- Break In Case Of Consultancy: Guide To Cybersecurity Assessments
