@@ -41,7 +41,7 @@ export default function ProjectsPage() {
       setFilteredProjects(projects);
     } else {
       const filtered = projects.filter(project =>
-        project.tags && selectedTags.some(tag => project.tags.includes(tag))
+        project.tags && selectedTags.some(tag => (project.tags ?? []).includes(tag))
       );
       setFilteredProjects(filtered);
     }
