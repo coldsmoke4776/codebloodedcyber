@@ -25,7 +25,7 @@ export default function ProjectsPage() {
         setFilteredProjects(fetchedProjects);
 
         // Extract all unique tags, handling projects without tags
-        const tags = Array.from(new Set(fetchedProjects.flatMap((project: Project) => project.tags || [])));
+        const tags = Array.from(new Set(fetchedProjects.flatMap((project: Project) => project.tags || []))) as string[];
         setAllTags(tags);
       } catch (error) {
         console.error("Failed to fetch projects:", error);
