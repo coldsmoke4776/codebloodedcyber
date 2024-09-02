@@ -21,12 +21,12 @@ export default function BlogPage() {
   useEffect(() => {
     const fetchPosts = async () => {
       const response = await fetch('/api/blog-posts');
-      const fetchedPosts = await response.json();
+      const fetchedPosts: BlogPost[] = await response.json();
       setPosts(fetchedPosts);
       setFilteredPosts(fetchedPosts);
 
       // Extract all unique tags
-      const tags = Array.from(new Set(fetchedPosts.flatMap(post => post.tags)));
+      const tags = Array.from(new Set(fetchedPosts.flatMap((post: BlogPost) => post.tags)));
       setAllTags(tags);
     };
 
