@@ -9,7 +9,8 @@ export type Project = {
   amazonLink?: string;
   additionalDetails?: string;
   screenshots: string[];  // New field for screenshots
-  projectType: string;  // New field for project type (for enhanced filtering)
+  projectType: string;
+  tags: string[];   // New field for project type (for enhanced filtering)
 }
 
 export const projects: Project[] = [
