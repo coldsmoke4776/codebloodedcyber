@@ -118,8 +118,8 @@ export default function ContactPage() {
           
           <h2 className="text-2xl font-semibold mt-8 mb-4 text-purple-600">Follow Me</h2>
           <div className="flex space-x-4">
-            <a href="#" className="text-gray-600 hover:text-purple-600"><FaLinkedin size={24} /></a>
-            <a href="#" className="text-gray-600 hover:text-purple-600"><FaGithub size={24} /></a>
+            <a href="https://www.linkedin.com/in/mt4776/" className="text-gray-600 hover:text-purple-600"><FaLinkedin size={24} /></a>
+            <a href="https://github.com/coldsmoke4776" className="text-gray-600 hover:text-purple-600"><FaGithub size={24} /></a>
           </div>
         </div>
       </div>
